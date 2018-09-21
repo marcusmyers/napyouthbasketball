@@ -3,7 +3,9 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -44,6 +46,8 @@ class Team extends Resource
             ID::make()->sortable(),
             Text::make('Name')
                  ->rules('required', 'string', 'max:100'),
+            Avatar::make('Avatar'),
+            Image::make('Team Photo'),
         ];
     }
 

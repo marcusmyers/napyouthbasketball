@@ -17,7 +17,9 @@ class TeamsResourceTest extends TestCase
     {
         $team = factory(Team::class)->create();
   
+  		// dd($team);
         $response = $this->actingAs($this->user)->get('/nova-api/teams/2');
+        
         $response->assertJson([
             'resource' => [
                 'id' => [
@@ -34,6 +36,18 @@ class TeamsResourceTest extends TestCase
                         'attribute' => 'name',
                         'name'      => 'Name',
                         'value'     => $team->name,
+                    ],
+                    [
+                    	'component' => 'file-field',
+                    	'attribute' => 'avatar',
+                    	'name'      => 'Avatar',
+                    	'value'		=> $team->avatar,
+                    ],
+                    [
+                    	'component' => 'file-field',
+                    	'attribute' => 'team_photo',
+                    	'name'      => 'Team Photo',
+                    	'value'		=> $team->team_photo,
                     ],
                 ],
             ],
