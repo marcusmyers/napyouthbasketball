@@ -3,21 +3,19 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Avatar;
-use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Team extends Resource
+class League extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Team';
+    public static $model = 'App\League';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -33,6 +31,7 @@ class Team extends Resource
      */
     public static $search = [
         'name',
+        'teams',
     ];
 
     /**
@@ -46,10 +45,8 @@ class Team extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Name')
-                 ->rules('required', 'string', 'max:100'),
-            Avatar::make('Avatar'),
-            Image::make('Team Photo'),
-            BelongsTo::make('League'),
+                 ->rules('required', 'string', 'min:5'),
+            HasMany::make('Teams'),
         ];
     }
 
