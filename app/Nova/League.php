@@ -43,9 +43,10 @@ class League extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->sortable()->hideFromIndex(),
             Text::make('Name')
-                 ->rules('required', 'string', 'min:5'),
+                ->sortable()
+                ->rules('required', 'string', 'min:5'),
             HasMany::make('Teams'),
         ];
     }

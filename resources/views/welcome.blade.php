@@ -77,6 +77,7 @@
             @endif
 
             <div class="content">
+                @include('teams.partials.avatar', ['width' => '100', 'height' => '100', 'viewBox' => '0 0 126 24'])
                 <div class="title m-b-md">
                     Laravel
                 </div>
