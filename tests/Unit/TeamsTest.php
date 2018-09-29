@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Game;
 use App\League;
 use App\Team;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -34,5 +35,13 @@ class TeamsTest extends TestCase
 
         $this->assertEquals(1, $foundTeam->league()->count());
         $this->assertEquals($league->name, $foundTeam->league()->first()->name);
+    }
+
+    public function test_a_team_has_games()
+    {
+        $team = factory(Team::class)->create();
+        $team->games()->attach(factory(Game::class, 5)->create());
+        
+        $this->assertEquals(5, $team->games()->count());
     }
 }

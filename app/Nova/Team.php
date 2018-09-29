@@ -5,6 +5,7 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Text;
@@ -44,12 +45,14 @@ class Team extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->sortable()->hideFromIndex(),
             Text::make('Name')
-                 ->rules('required', 'string', 'max:100'),
+                ->sortable()
+                ->rules('required', 'string', 'max:100'),
             Avatar::make('Avatar'),
             Image::make('Team Photo'),
             BelongsTo::make('League'),
+            BelongsToMany::make('Games'),
         ];
     }
 
