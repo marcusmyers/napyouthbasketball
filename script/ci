@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+composer install
+
+vendor/bin/phpunit

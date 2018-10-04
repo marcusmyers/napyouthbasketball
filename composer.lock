@@ -653,17 +653,17 @@
         },
         {
             "name": "laravel/nova",
-            "version": "v1.1.3",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "128428b44cacd13acd04cd9ec5c3f877c4dd7f6b"
+                "reference": "78b0202f76c839b9946198ad933b4f44773d52ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-128428b44cacd13acd04cd9ec5c3f877c4dd7f6b-zip-d3f762.zip",
-                "reference": "128428b44cacd13acd04cd9ec5c3f877c4dd7f6b",
-                "shasum": "1605f542b8a65834fe380a3c5d509290e82fd0ce"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-78b0202f76c839b9946198ad933b4f44773d52ec-zip-f564ae.zip",
+                "reference": "78b0202f76c839b9946198ad933b4f44773d52ec",
+                "shasum": "a2425621bb2da5b9c19b0173518d2463f56f865d"
             },
             "require": {
                 "cakephp/chronos": "~1.0",
@@ -718,7 +718,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2018-09-21T19:30:33+00:00"
+            "time": "2018-10-01T13:35:37+00:00"
         },
         {
             "name": "laravel/tinker",
