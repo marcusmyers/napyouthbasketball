@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+composer install
+composer prepare-test-environment
+
+vendor/bin/phpunit
