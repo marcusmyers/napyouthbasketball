@@ -1,6 +1,8 @@
 #!/bin/zsh
 
 composer install --no-dev
+npm install
+npm run production
 
 docker build -t $DOCKER_IMAGE .
 
