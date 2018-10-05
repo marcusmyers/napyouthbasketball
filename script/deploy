@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+# Ensure if any of these commands fail, this script will
+setopt err_exit
+
+log_message() {
+  echo $(date +"%I:%M:%S %D") $*
+}
+
+export SENTRY_AUTH_TOKEN=0f56b8607d894477a2fdb37b3cae3061c1af0e73a7a443f5bdb1e2737f145af3
+export SENTRY_ORG=mark-myers
+VERSION=$(sentry-cli releases propose-version)
+
+log_message "RUNNING: Setting the docker machine to $DOCKER_MACHINE"
+eval $(docker-machine env $DOCKER_MACHINE)
+
+log_message "RUNNING: sentry-cli releases new -p nwofca $VERSION"
+sentry-cli releases new -p napyouthbball $VERSION
+
+# Associate commits with the release
+sentry-cli releases set-commits --auto $VERSION
+
+log_message "RUNNING: docker stack deploy --compose-file swarm.yml --with-registry-auth napyouthbball"
+docker stack deploy --compose-file swarm.yml --with-registry-auth napyouthbball

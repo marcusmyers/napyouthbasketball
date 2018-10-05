@@ -3,8 +3,8 @@
           		<div class="footer-menu w-1/2 text-left">
           			<ul class="list-reset sm:flex text-lg flex-col text-left">
           				<!-- <li><a href="/teams" class="text-navy-darker no-underline hover:text-white">Teams</a></li>
-          				<li><a href="/teams" class="text-navy-darker no-underline hover:text-white">Photos & Videos</a></li> -->
-          				<li><a href="/teams" class="text-navy-darker no-underline hover:text-white">Forms</a></li>
+          				<li><a href="/teams" class="text-navy-darker no-underline hover:text-white">Photos & Videos</a></li>
+          				<li><a href="/teams" class="text-navy-darker no-underline hover:text-white">Forms</a></li> -->
           			</ul>
           		</div>
           			<div class="footer-menu w-1/2 text-right">

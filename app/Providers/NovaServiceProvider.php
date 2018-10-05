@@ -54,7 +54,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-            new Help,
+            new \Tightenco\NovaGoogleAnalytics\PageViewsMetric,
+            new \Tightenco\NovaReleases\LatestRelease,
         ];
     }
 
@@ -67,6 +68,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         return [
              new \Vyuldashev\NovaPermission\NovaPermissionTool(),
+             new \Tightenco\NovaReleases\AllReleases,
         ];
     }
 
