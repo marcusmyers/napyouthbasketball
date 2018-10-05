@@ -14,7 +14,7 @@ VERSION=$(sentry-cli releases propose-version)
 log_message "RUNNING: Setting the docker machine to $DOCKER_MACHINE"
 eval $(docker-machine env $DOCKER_MACHINE)
 
-log_message "RUNNING: sentry-cli releases new -p nwofca $VERSION"
+log_message "RUNNING: sentry-cli releases new -p napyouthbball $VERSION"
 sentry-cli releases new -p napyouthbball $VERSION
 
 # Associate commits with the release
