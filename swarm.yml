@@ -14,12 +14,6 @@ services:
         delay: 5s
         max_attempts: 3
 
-  worker:
-    image: ${DOCKER_IMAGE:-napyouthbball_dev}
-    command: php artisan horizon
-    healthcheck:
-      disable: true
-
   redis:
     image: redis:4.0.10
     volumes:

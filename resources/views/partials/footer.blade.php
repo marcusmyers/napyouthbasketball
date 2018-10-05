@@ -8,7 +8,7 @@
           			</ul>
           		</div>
           			<div class="footer-menu w-1/2 text-right">
-		          		<div class="social-icons pin-r">
+		          		<div class="social-icons pin-r mr-8">
 		          			<a target="_blank" href="https://www.twitter.com/napyth">
 									      <svg xmlns="http://www.w3.org/2000/svg"
 													aria-label="Twitter" role="img"
