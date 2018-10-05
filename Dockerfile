@@ -9,5 +9,5 @@ RUN apt-get update && \
     apt-get -q clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY . /app
+COPY --chown=application:application . /app
 WORKDIR /app
