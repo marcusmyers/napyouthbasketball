@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/forms', function () {
+    return view('forms');
+});
+
 // Simple status or health check
 Route::get('/status', function() {
     $dbstatus = "";

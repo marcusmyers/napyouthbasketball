@@ -15,11 +15,11 @@
 
 					      <li><a href="#responsive-header" class="font-sans block mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white mr-4">
 					        Photos/Videos
-					      </a></li>
+					      </a></li>-->
 					      <li><a href="#responsive-header" class="font-sans block mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white">
 					        Forms
 					      </a>
-					    	</li>-->
+					    	</li>
 					    </ul>
 					    <!-- </div> -->
 					  </div>
