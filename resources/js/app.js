@@ -15,6 +15,14 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
-    el: '#app'
+new Vue({
+	el: '#nav',
+  data: {
+  	open: false,
+  },
+  methods: {
+  	toggle() {
+    	this.open = !this.open
+    }
+  }
 });

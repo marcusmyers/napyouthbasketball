@@ -119,8 +119,16 @@ window.Vue = __webpack_require__(3);
 
 Vue.component('example-component', __webpack_require__(7));
 
-var app = new Vue({
-  el: '#app'
+new Vue({
+  el: '#nav',
+  data: {
+    open: false
+  },
+  methods: {
+    toggle: function toggle() {
+      this.open = !this.open;
+    }
+  }
 });
 
 /***/ }),
