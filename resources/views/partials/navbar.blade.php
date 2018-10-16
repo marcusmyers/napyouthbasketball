@@ -5,7 +5,7 @@
 					      	<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
 					    	</button>
 					  	</div>
-					  	<div :class="open ? 'block': 'hidden'" class="w-full sm:items-center sm:w-auto">
+					  	<div :class="open ? 'block' : 'hidden'" class="w-full sm:items-center sm:w-auto sm:hidden md:block">
 					  			<ul class="list-reset md:flex sm:flex-grow pin-r">
 					    
 						      	<!-- <li><a href="#responsive-header" class="font-sans block sm:inline-block sm:mt-0 mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white mr-4">
