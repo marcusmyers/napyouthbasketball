@@ -77,7 +77,8 @@ class TeamsResourceTest extends TestCase
                 ]
             ));
 
-        $response->assertStatus(201);
+        $response->assertStatus(302);
+        // $response->assertStatus(201);
     }
 
     public function test_name_is_required_on_create()
