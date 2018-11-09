@@ -32,6 +32,13 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 ->register();
     }
 
+    protected function is_super_administrator()
+    {
+        Gate::define('viewAdminDashboard', function($user){
+            return $user->hasRole('super_administrator');
+        });
+    }
+
     /**
      * Register the Nova gate.
      *
