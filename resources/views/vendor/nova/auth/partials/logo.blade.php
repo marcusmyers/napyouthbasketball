@@ -1,0 +1,1 @@
+@include('nova::partials.logo', ['width' => 'w-8', 'height' => 'h-8', 'fill' => '#2D4059', 'textSize' => 'text-xl'])

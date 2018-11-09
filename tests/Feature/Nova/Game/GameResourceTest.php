@@ -17,9 +17,10 @@ class GameResourceTest extends TestCase
 
   public function test_game_can_be_retrieved_with_correct_resource_elements()
   {
+    $this->expectException(\Illuminate\Auth\Access\AuthorizationException::class);
   	$game = factory(Game::class)->create();
 
-  	$response = $this->actingAs($this->user)->get('/nova-api/games/'.$game->id);
+  	$response = $this->get('/nova-api/games/'.$game->id);
 
   	$response->assertJson([
   		'resource' => [

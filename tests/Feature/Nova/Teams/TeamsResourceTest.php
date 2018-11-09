@@ -19,10 +19,11 @@ class TeamsResourceTest extends TestCase
     
     public function test_team_can_be_retrieved_with_correct_resource_elements()
     {
+        $this->expectException(\Illuminate\Auth\Access\AuthorizationException::class);
         $league = factory(League::class)->create();
         $team = factory(Team::class)->create(['league_id' => $league->id]);
   
-        $response = $this->actingAs($this->user)->get('/nova-api/teams/'.$team->id);
+        $response = $this->get('/nova-api/teams/'.$team->id);
 
         $response->assertJson([
             'resource' => [
@@ -68,7 +69,7 @@ class TeamsResourceTest extends TestCase
     public function test_team_has_correct_validation_on_create()
     {
         $team = factory(Team::class)->make();
-        $response = $this->actingAs($this->user)->post('/nova-api/teams/', 
+        $response = $this->post('/nova-api/teams/', 
             array_merge(
                 $team->getAttributes(),
                 [
@@ -83,7 +84,7 @@ class TeamsResourceTest extends TestCase
 
     public function test_name_is_required_on_create()
     {
-        $response = $this->actingAs($this->user)->post('/nova-api/teams/', ['name'=>null]);
+        $response = $this->post('/nova-api/teams/', ['name'=>null]);
         $response->assertStatus(302);
         $response->assertSessionHasErrors([
             'name' => 'The name field is required.',

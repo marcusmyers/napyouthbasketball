@@ -21,5 +21,6 @@ abstract class TestCase extends BaseTestCase
         // create roles and assign existing permissions
         $this->seed('RolesAndPermissionsSeeder');
         $this->user = factory(\App\User::class)->create();
+        $this->actingAs($this->user);
     }
 }
