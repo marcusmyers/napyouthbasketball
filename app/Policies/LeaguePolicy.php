@@ -23,7 +23,7 @@ class LeaguePolicy
      */
     public function view(User $user, League $league)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -34,7 +34,7 @@ class LeaguePolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -46,7 +46,7 @@ class LeaguePolicy
      */
     public function update(User $user, League $league)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -58,7 +58,7 @@ class LeaguePolicy
      */
     public function delete(User $user, League $league)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -70,7 +70,7 @@ class LeaguePolicy
      */
     public function restore(User $user, League $league)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -82,6 +82,6 @@ class LeaguePolicy
      */
     public function forceDelete(User $user, League $league)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 }

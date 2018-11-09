@@ -24,7 +24,7 @@ class SeasonPolicy
      */
     public function view(User $user, Season $season)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -35,7 +35,7 @@ class SeasonPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -47,7 +47,7 @@ class SeasonPolicy
      */
     public function update(User $user, Season $season)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -59,7 +59,7 @@ class SeasonPolicy
      */
     public function delete(User $user, Season $season)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -71,7 +71,7 @@ class SeasonPolicy
      */
     public function restore(User $user, Season $season)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -83,6 +83,6 @@ class SeasonPolicy
      */
     public function forceDelete(User $user, Season $season)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 }
