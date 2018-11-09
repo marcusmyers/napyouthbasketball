@@ -18,7 +18,6 @@ class LeagueResourceTest extends TestCase
     
     public function test_league_can_be_retrieved_with_correct_resource_elements()
     {
-        $this->expectException(\Illuminate\Auth\Access\AuthorizationException::class);
     	$league = factory(League::class)->create();
     	factory(Team::class, 4)->create(['league_id'=>$league->id]);
     	
@@ -54,20 +53,18 @@ class LeagueResourceTest extends TestCase
 
     public function test_league_has_correct_validation_on_create()
     {
-        // $this->expectException(\Illuminate\Auth\Access\AuthorizationException::class);
         $league = factory(\App\League::class)->make();
         $response = $this->post('/nova-api/leagues/', $league->toArray());
         
-        // $response->assertStatus(201);
-        $response->assertStatus(403);
+        $response->assertStatus(201);
     }
 
     public function test_name_is_required_on_create()
     {
         $response = $this->post('/nova-api/leagues/', ['name'=>null]);
-        $response->assertStatus(403);
-        // $response->assertSessionHasErrors([
-        //     'name' => 'The name field is required.',
-        // ]);
+        $response->assertStatus(302);
+        $response->assertSessionHasErrors([
+            'name' => 'The name field is required.',
+        ]);
     }
 }

@@ -23,7 +23,7 @@ class GamePolicy
      */
     public function view(User $user, Game $game)
     {
-        
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -34,7 +34,7 @@ class GamePolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -46,7 +46,7 @@ class GamePolicy
      */
     public function update(User $user, Game $game)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -58,7 +58,7 @@ class GamePolicy
      */
     public function delete(User $user, Game $game)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -70,7 +70,7 @@ class GamePolicy
      */
     public function restore(User $user, Game $game)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -82,6 +82,6 @@ class GamePolicy
      */
     public function forceDelete(User $user, Game $game)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 }

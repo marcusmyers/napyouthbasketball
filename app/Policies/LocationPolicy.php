@@ -24,7 +24,7 @@ class LocationPolicy
      */
     public function view(User $user, Location $location)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -35,7 +35,7 @@ class LocationPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -47,7 +47,7 @@ class LocationPolicy
      */
     public function update(User $user, Location $location)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -59,7 +59,7 @@ class LocationPolicy
      */
     public function delete(User $user, Location $location)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -71,7 +71,7 @@ class LocationPolicy
      */
     public function restore(User $user, Location $location)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 
     /**
@@ -83,6 +83,6 @@ class LocationPolicy
      */
     public function forceDelete(User $user, Location $location)
     {
-        //
+        return $user->hasRole('super_administrator');
     }
 }
