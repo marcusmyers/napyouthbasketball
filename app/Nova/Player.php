@@ -3,28 +3,31 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\Gravatar;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\MorphToMany;
-use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
-class User extends Resource
+class Player extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\\User';
+    public static $model = 'App\Player';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'first_name';
 
     /**
      * The columns that should be searched.
@@ -32,8 +35,13 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'first_name', 'last_name', 'grade',
     ];
+
+    public function title()
+    {
+        return $this->first_name . " " . $this->last_name;
+    }
 
     /**
      * Get the fields displayed by the resource.
@@ -44,30 +52,30 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable()->hideFromIndex(),
+            ID::make()->hideFromIndex(),
+            Avatar::make('Avatar'),
+            Text::make('First Name'),
+            Text::make('Last Name')->sortable(),
+            Number::make('Grade'),
+            Text::make('Height')->onlyOnDetail(),
+            Text::make('Weight')->onlyOnDetail(),
+            Text::make('Shirt Size')->hideFromIndex(),
+            new Panel('Family Information', $this->familyInformationFields()),
+            Boolean::make('Paid')->onlyOnForms(),
+            Boolean::make('Signed Waiver')->onlyOnForms(),
+            Boolean::make('Willing To Coach')->onlyOnForms(),
+            BelongsTo::make('Team'),
+        ];
+    }
 
-            Gravatar::make(),
-
-            Text::make('Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
-
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
-
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:6')
-                ->updateRules('nullable', 'string', 'min:6'),
-
-
-            BelongsTo::make('Team')->nullable(),
-
-            MorphToMany::make('Roles', 'roles', \Vyuldashev\NovaPermission\Role::class),
-            MorphToMany::make('Permissions', 'permissions', \Vyuldashev\NovaPermission\Permission::class),
+    protected function familyInformationFields()
+    {
+        return [
+            Place::make('Address')->hideFromIndex(),
+            Text::make('Phone'),
+            Text::make('Alt Phone')->hideFromIndex(),
+            Text::make('Email')->hideFromIndex(),
+            Text::make('Parents Names'),
         ];
     }
 

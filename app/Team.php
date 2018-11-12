@@ -19,4 +19,14 @@ class Team extends Model
     {
     	return $this->belongsToMany('App\Game');
     }
+
+    public function players()
+    {
+        return $this->hasMany('App\Player');
+    }
+
+    public function users()
+    {
+        return $this->hasMany('App\User');
+    }
 }

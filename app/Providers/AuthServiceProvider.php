@@ -19,6 +19,7 @@ class AuthServiceProvider extends ServiceProvider
         'App\Season' => 'App\Policies\SeasonPolicy',
         'App\Team' => 'App\Policies\TeamPolicy',
         'App\User' => 'App\Policies\UserPolicy',
+        'App\Player' => 'App\Policies\PlayerPolicy',
     ];
 
     /**

@@ -41,6 +41,12 @@ class LeagueResourceTest extends TestCase
                         'value'     => $league->name,
                     ],
                     [
+                        'component' => 'belongs-to-field',
+                        'attribute' => 'season',
+                        'name' => 'Season',
+                        'value' => null,
+                    ],
+                    [
                         'component' => 'has-many-field',
                         'attribute' => 'teams',
                         'name' => 'Teams',
@@ -56,7 +62,7 @@ class LeagueResourceTest extends TestCase
         $league = factory(\App\League::class)->make();
         $response = $this->post('/nova-api/leagues/', $league->toArray());
         
-        $response->assertStatus(201);
+        $response->assertStatus(302);
     }
 
     public function test_name_is_required_on_create()
