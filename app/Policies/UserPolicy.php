@@ -11,7 +11,7 @@ class UserPolicy
 
     public function viewAny(User $user)
     {
-        return true;
+        return $user->hasRole('super_administrator');
     }
 
     /**

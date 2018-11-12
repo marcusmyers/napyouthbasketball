@@ -14,4 +14,9 @@ class Season extends Model
     {
     	return $this->hasMany('App\Game');
     }
+
+    public function leagues()
+    {
+    	return $this->belongsToMany('App\leagues');
+    }
 }

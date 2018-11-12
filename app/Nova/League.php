@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -31,7 +32,6 @@ class League extends Resource
      */
     public static $search = [
         'name',
-        'teams',
     ];
 
     /**
@@ -47,6 +47,7 @@ class League extends Resource
             Text::make('Name')
                 ->sortable()
                 ->rules('required', 'string', 'min:5'),
+            BelongsTo::make('Season')->sortable(),
             HasMany::make('Teams'),
         ];
     }

@@ -61,8 +61,12 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-            new \Tightenco\NovaGoogleAnalytics\PageViewsMetric,
-            new \Tightenco\NovaReleases\LatestRelease,
+            (new \Tightenco\NovaGoogleAnalytics\PageViewsMetric)->canSee(function ($request) {
+                return $request->user()->hasRole('super_administrator');
+            }),
+            (new \Tightenco\NovaReleases\LatestRelease)->canSee(function ($request) {
+                return $request->user()->hasRole('super_administrator');
+            }),
         ];
     }
 
@@ -74,8 +78,12 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
-             new \Vyuldashev\NovaPermission\NovaPermissionTool(),
-             new \Tightenco\NovaReleases\AllReleases,
+            (new \Vyuldashev\NovaPermission\NovaPermissionTool)->canSee(function ($request) {
+                return $request->user()->hasRole('super_administrator');
+            }),
+            (new \Tightenco\NovaReleases\AllReleases)->canSee(function ($request) {
+                return $request->user()->hasRole('super_administrator');
+            }),
         ];
     }
 

@@ -3,6 +3,7 @@
 namespace Tests\Feature\Nova\Teams;
 
 use App\League;
+use App\Season;
 use App\Team;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
@@ -19,7 +20,7 @@ class TeamsResourceTest extends TestCase
     
     public function test_team_can_be_retrieved_with_correct_resource_elements()
     {
-        $league = factory(League::class)->create();
+        $league = factory(League::class)->create(['season_id' => factory(Season::class)->create()->id]);
         $team = factory(Team::class)->create(['league_id' => $league->id]);
   
         $response = $this->get('/nova-api/teams/'.$team->id);
