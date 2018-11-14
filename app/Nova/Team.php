@@ -55,6 +55,7 @@ class Team extends Resource
             BelongsTo::make('League'),
             HasMany::make('Users'),
             BelongsToMany::make('Games'),
+            HasMany::make('Players'),
         ];
     }
 
