@@ -61,11 +61,9 @@ class Player extends Resource
                 ->sortable()
                 ->rules('required', 'max:2'),
             Text::make('Height')
-                ->nullable()
                 ->onlyOnDetail()
                 ->onlyOnForms(),
             Text::make('Weight')
-                ->nullable()
                 ->onlyOnDetail()
                 ->onlyOnForms(),
             Text::make('Shirt Size')->hideFromIndex(),
