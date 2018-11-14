@@ -55,16 +55,25 @@ class Player extends Resource
             ID::make()->hideFromIndex(),
             Avatar::make('Avatar'),
             Text::make('First Name'),
-            Text::make('Last Name')->sortable(),
-            Number::make('Grade'),
-            Text::make('Height')->onlyOnDetail(),
-            Text::make('Weight')->onlyOnDetail(),
+            Text::make('Last Name')
+                ->sortable(),
+            Number::make('Grade')
+                ->sortable()
+                ->rules('required', 'max:2'),
+            Text::make('Height')
+                ->nullable()
+                ->onlyOnDetail()
+                ->onlyOnForms(),
+            Text::make('Weight')
+                ->nullable()
+                ->onlyOnDetail()
+                ->onlyOnForms(),
             Text::make('Shirt Size')->hideFromIndex(),
+            BelongsTo::make('Team')->nullable(),
             new Panel('Family Information', $this->familyInformationFields()),
             Boolean::make('Paid')->onlyOnForms(),
             Boolean::make('Signed Waiver')->onlyOnForms(),
             Boolean::make('Willing To Coach')->onlyOnForms(),
-            BelongsTo::make('Team'),
         ];
     }
 
@@ -74,7 +83,8 @@ class Player extends Resource
             Place::make('Address')->hideFromIndex(),
             Text::make('Phone'),
             Text::make('Alt Phone')->hideFromIndex(),
-            Text::make('Email')->hideFromIndex(),
+            Text::make('Email')
+                ->hideFromIndex(),
             Text::make('Parents Names'),
         ];
     }
