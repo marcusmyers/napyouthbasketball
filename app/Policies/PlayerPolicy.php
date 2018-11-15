@@ -20,7 +20,7 @@ class PlayerPolicy
     public function view(User $user, Player $player)
     {
         if ($user->hasRole('coach')) {
-            return $user->team()->id == $player->team()->id;
+            return $user->team->id == $player->team->id;
         } else {
             return $user->hasRole('super_administrator');
         }
