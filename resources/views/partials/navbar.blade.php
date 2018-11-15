@@ -16,7 +16,11 @@
 						        Photos/Videos
 						      	</a></li>
 						      -->
-						      	<li><a href="/forms" class="font-sans block mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white">
+						      	<li><a href="/coaches" class="font-sans block mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white">
+						        Coaches
+						      	</a></li>
+
+						      	<li class="md:ml-4"><a href="/forms" class="font-sans block mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white">
 						        Forms
 						      	</a></li>
 					    		</ul>
