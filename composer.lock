@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "031eb6b9375e537c67a409470dfa62c5",
+    "content-hash": "160fc86b6e834e2d07a4538f85e16cbf",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -4235,6 +4235,60 @@
                 "environment"
             ],
             "time": "2018-07-29T20:33:41+00:00"
+        },
+        {
+            "name": "vmitchell85/nova-links",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vmitchell85/nova-links.git",
+                "reference": "420fb04bd036ba312c328f1dfb2a34f09b63743f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vmitchell85/nova-links/zipball/420fb04bd036ba312c328f1dfb2a34f09b63743f",
+                "reference": "420fb04bd036ba312c328f1dfb2a34f09b63743f",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "*",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.6",
+                "phpunit/phpunit": "7.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "vmitchell85\\NovaLinks\\NovaLinksServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "vmitchell85\\NovaLinks\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vince Mitchell",
+                    "email": "vincent.mitchell@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add custom links to your nova navigation",
+            "homepage": "https://github.com/vmitchell85/nova-links",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-08-25T20:06:40+00:00"
         },
         {
             "name": "vyuldashev/nova-permission",

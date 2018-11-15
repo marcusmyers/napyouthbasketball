@@ -84,7 +84,11 @@ class Video extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            (new Filters\VideoType)->canSee(function ($request) {
+                return $request->user()->hasRole('super_administrator');
+            }),
+        ];
     }
 
     /**
@@ -95,7 +99,11 @@ class Video extends Resource
      */
     public function lenses(Request $request)
     {
-        return [];
+        return [
+            (new Lenses\InstructionalVideos)->canSee(function ($request) {
+                return $request->user()->hasRole('coach');
+            }),
+        ];
     }
 
     /**
