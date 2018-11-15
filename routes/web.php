@@ -19,6 +19,8 @@ Route::get('/forms', function () {
     return view('forms');
 });
 
+Route::redirect('/coaches', '/admin', 301);
+
 // Simple status or health check
 Route::get('/status', function() {
     $dbstatus = "";
