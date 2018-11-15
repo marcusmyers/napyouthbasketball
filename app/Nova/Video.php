@@ -100,9 +100,7 @@ class Video extends Resource
     public function lenses(Request $request)
     {
         return [
-            (new Lenses\InstructionalVideos)->canSee(function ($request) {
-                return $request->user()->hasRole('coach');
-            }),
+            new Lenses\InstructionalVideos,
         ];
     }
 
