@@ -15,6 +15,7 @@
         "fideloper/proxy": "^4.0",
         "gregoriohc/laravel-nova-theme-responsive": "^0.6.1",
         "guzzlehttp/guzzle": "^6.3",
+        "inspheric/nova-url-field": "^1.1",
         "laravel/framework": "5.7.*",
         "laravel/nova": "^1.1",
         "laravel/tinker": "^1.0",

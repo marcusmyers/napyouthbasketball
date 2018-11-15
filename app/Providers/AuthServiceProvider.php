@@ -20,6 +20,7 @@ class AuthServiceProvider extends ServiceProvider
         'App\Team' => 'App\Policies\TeamPolicy',
         'App\User' => 'App\Policies\UserPolicy',
         'App\Player' => 'App\Policies\PlayerPolicy',
+        'App\Video' => 'App\Policies\VideoPolicy',
     ];
 
     /**
