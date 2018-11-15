@@ -84,9 +84,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             (new \Tightenco\NovaReleases\AllReleases)->canSee(function ($request) {
                 return $request->user()->hasRole('super_administrator');
             }),
-            (new \vmitchell85\NovaLinks\Links())->canSee(function ($request) {
-                return $request->user()->hasRole('coach');
-            }),
+            new \vmitchell85\NovaLinks\Links(),
         ];
     }
 
