@@ -44,6 +44,15 @@ class Player extends Resource
         return $this->first_name . " " . $this->last_name;
     }
 
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        if($request->user()->hasRole('super_administrator')){
+            return $query;
+        } else {
+            return $query->where('team_id', $request->user()->team->id);
+        }
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
