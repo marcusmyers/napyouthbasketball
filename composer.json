@@ -25,7 +25,6 @@
         "silvanite/nova-field-cloudinary": "^1.0",
         "tightenco/nova-google-analytics": "^0.1.4",
         "tightenco/nova-releases": "^0.2.2",
-        "vmitchell85/nova-links": "^0.0.1",
         "vyuldashev/nova-permission": "^1.3"
     },
     "require-dev": {
