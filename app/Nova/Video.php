@@ -35,6 +35,15 @@ class Video extends Resource
         'id',
     ];
 
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        if($request->user()->hasRole('super_administrator')){
+            return $query;
+        } else {
+            return $query->where('type', 'Instructional');
+        }
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -92,7 +101,7 @@ class Video extends Resource
     }
 
     /**
-     * Get the lenses available for the resource.
+     * Get the lenses available for the resource
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array
