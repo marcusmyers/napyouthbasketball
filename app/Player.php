@@ -24,7 +24,7 @@ class Player extends Model
 
 	public function getNameAttribute()
   {
-  	return $this->first_name . ' ' .$this->last_name;
+  	return ucwords(strtolower($this->first_name) . ' ' . strtolower($this->last_name));
   }
 
   public function team()

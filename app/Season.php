@@ -19,4 +19,9 @@ class Season extends Model
     {
     	return $this->belongsToMany('App\leagues');
     }
+
+    public static function findActive()
+    {
+        return self::where('active', 1)->first();
+    }
 }

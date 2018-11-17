@@ -50,7 +50,8 @@ class Team extends Resource
             Text::make('Name')
                 ->sortable()
                 ->rules('required', 'string', 'max:100'),
-            Avatar::make('Avatar'),
+            Avatar::make('Avatar')
+                ->disk('cloudinary'),
             Image::make('Team Photo'),
             BelongsTo::make('League'),
             HasMany::make('Users'),
