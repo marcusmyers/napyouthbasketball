@@ -19,6 +19,9 @@ Route::get('/forms', function () {
     return view('forms');
 });
 
+Route::get('/teams', 'TeamsController@index');
+Route::get('/teams/{team}', 'TeamsController@show');
+
 Route::redirect('/coaches', '/admin', 301);
 
 // Simple status or health check

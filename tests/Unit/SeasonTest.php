@@ -31,4 +31,13 @@ class SeasonTest extends TestCase
 
     	$this->assertEquals(2, $season->games()->count());
     }
+
+    public function test_a_season_can_be_found_by_active()
+    {
+        factory(Season::class)->state('active')->create(['name'=>date('Y')]);
+
+        $foundSeason = Season::findActive();
+
+        $this->assertEquals(date('Y'), $foundSeason->name);
+    }
 }
