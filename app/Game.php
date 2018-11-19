@@ -22,6 +22,13 @@ class Game extends Model
     	return $this->game_time->format('g:ia');
     }
 
+    public function opponent($id)
+    {
+        return $this->teams->reject(function ($team) use ($id){
+            return $team->id === $id;
+        })->first();
+    }
+
     public function season()
     {
         return $this->belongsTo('App\Season');

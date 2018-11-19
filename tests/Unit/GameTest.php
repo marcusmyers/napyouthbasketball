@@ -44,6 +44,20 @@ class GameTest extends TestCase
         $this->assertEquals(1, $game->season()->count());
     }
 
+    public function test_can_get_opponnet()
+    {
+        $team = factory(Team::class)->create();
+        $opponent = factory(Team::class)->create();
+        $season = factory(Season::class)->state('not_active')->create();
+        $game = factory(Game::class)->create(['season_id' => $season->id]);
+        $game->teams()->attach($team);
+        $game->teams()->attach($opponent);
+
+        $foundGame = Game::find($game->id);
+
+        $this->assertEquals($opponent->name, $foundGame->opponent($team->id)->name);
+    }
+
     public function test_can_get_all_game_data()
     {
         $team = factory(Team::class)->create();
