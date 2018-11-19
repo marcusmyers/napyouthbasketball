@@ -17,4 +17,9 @@ class Location extends Model
     {
     	return $this->hasMany('App\Game');
     }
+
+    public function practices()
+    {
+    	return $this->hasMany('App\Practice');
+    }
 }

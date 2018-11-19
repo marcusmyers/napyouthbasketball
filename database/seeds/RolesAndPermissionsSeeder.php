@@ -17,5 +17,6 @@ class RolesAndPermissionsSeeder extends Seeder
         app()['cache']->forget('spatie.permission.cache');
         // create roles and assign existing permissions
         Role::create(['name' => 'super_administrator']);
+        Role::create(['name' => 'coach']);
     }
 }
