@@ -40,8 +40,13 @@
 				<tr>
 					<td class="p-2 border-b border-grey-light">{{$game->formatted_game_date}}</td>
 					<td class="p-2 border-b border-grey-light">{{$game->formatted_game_time}}</td>
+					@if ($game->teams)
 					<td class="p-2 border-b border-grey-light"><a href="/teams/{{$game->teams->first()->id}}" class="text-navy no-underline hover:text-navy-light">{{$game->teams->first()->name}}</a></td>
 					<td class="p-2 border-b border-grey-light"><a href="/teams/{{$game->teams->last()->id}}" class="text-navy no-underline hover:text-navy-light">{{$game->teams->last()->name}}</a></td>
+					@else
+					<td class="p-2 border-b border-grey-light">TBD</td>
+					<td class="p-2 border-b border-grey-light">TBD</td>
+					@endif
 				</tr>
 			@endforeach
 				</tbody>
