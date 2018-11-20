@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Practice extends Model
@@ -20,6 +21,11 @@ class Practice extends Model
   public function getFormattedPracticeTimeAttribute()
   {
   	return $this->practice_time->format('g:ia');
+  }
+
+  public function scopeNotOld($query)
+  {
+      return $query->where('practice_time', '>', Carbon::now());
   }
 
 	public function team()

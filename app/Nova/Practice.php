@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Nova\Lenses\OpenPracticeTimes;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\DateTime;
@@ -33,6 +34,15 @@ class Practice extends Resource
     public static $search = [
         'practice_time'
     ];
+
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        if($request->user()->hasRole('super_administrator')){
+            return $query;
+        } else {
+            return $query->where('practice_time', '>', Carbon::now());
+        }
+    }
 
     /**
      * Get the fields displayed by the resource.

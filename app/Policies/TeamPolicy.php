@@ -10,10 +10,15 @@ class TeamPolicy
 {
     use HandlesAuthorization;
 
-    public function viewAny(User $user)
-    {
-        return $user->hasRole('super_administrator');
-    }
+    // public function viewAny(User $user)
+    // {
+    //     if ($user->hasRole('coach')) {
+    //         $team = Team::find($user->team->id);
+    //         return $user->team->id === $team->id;
+    //     } else {
+    //         return $user->hasRole('super_administrator');
+    //     }
+    // }
     
     /**
      * Determine whether the user can view the team.
@@ -24,7 +29,7 @@ class TeamPolicy
      */
     public function view(User $user, Team $team)
     {
-        return $user->hasRole('super_administrator');
+        return true;
     }
 
     /**
