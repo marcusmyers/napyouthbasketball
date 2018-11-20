@@ -27,8 +27,15 @@
 						<td class="p-2 border-b border-grey-light">{{$game->formatted_game_date}}</td>
 						<td class="p-2 border-b border-grey-light">{{$game->formatted_game_time}}</td>
 						<td class="p-2 border-b border-grey-light"><a href="/teams/{{$game->opponent($team->id)->id}}" class="text-navy no-underline hover:text-navy-light">{{$game->opponent($team->id)->name}}</a></td>
-				</li>
+					</tr>
 				@endforeach
+				@if (str_contains($team->league->name,'Boys'))
+					<tr>
+						<td class="p-2 border-b border-grey-light">January 26, 2019</td>
+						<td class="p-2 border-b border-grey-light">TBD</td>
+						<td class="p-2 border-b border-grey-light">TBD</td>
+					</tr>
+				@endif
 				</tbody>
 			</table>
 		</div>
