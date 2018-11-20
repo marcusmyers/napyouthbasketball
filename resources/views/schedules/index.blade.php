@@ -40,7 +40,7 @@
 				<tr>
 					<td class="p-2 border-b border-grey-light">{{$game->formatted_game_date}}</td>
 					<td class="p-2 border-b border-grey-light">{{$game->formatted_game_time}}</td>
-					@if ($game->teams)
+					@if ($game->teams->count() === 2)
 					<td class="p-2 border-b border-grey-light"><a href="/teams/{{$game->teams->first()->id}}" class="text-navy no-underline hover:text-navy-light">{{$game->teams->first()->name}}</a></td>
 					<td class="p-2 border-b border-grey-light"><a href="/teams/{{$game->teams->last()->id}}" class="text-navy no-underline hover:text-navy-light">{{$game->teams->last()->name}}</a></td>
 					@else
