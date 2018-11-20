@@ -19,7 +19,7 @@ class PracticePolicy
      */
     public function view(User $user, Practice $practice)
     {
-        //
+        return true;
     }
 
     /**
@@ -42,7 +42,7 @@ class PracticePolicy
      */
     public function update(User $user, Practice $practice)
     {
-        //
+        return true;
     }
 
     /**

@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\LensRequest;
 use Laravel\Nova\Lenses\Lens;
+use Illuminate\Support\Facades\DB;
 
 class OpenPracticeTimes extends Lens
 {
@@ -22,8 +23,25 @@ class OpenPracticeTimes extends Lens
     public static function query(LensRequest $request, $query)
     {
         return $request->withOrdering($request->withFilters(
-            $query->where('team_id', null)
+            $query->select(self::columns())
+                  ->join('locations','practices.location_id', '=', 'locations.id')
+                  ->whereNull('team_id')
         ));
+    }
+
+    /**
+     * Get the columns that should be selected.
+     *
+     * @return array
+     */
+    protected static function columns()
+    {
+        return [
+            'practices.id',
+            'practices.practice_time',
+            DB::raw('locations.building as location'),
+            DB::raw('locations.court as court'),
+        ];
     }
 
     /**
@@ -35,9 +53,10 @@ class OpenPracticeTimes extends Lens
     public function fields(Request $request)
     {
         return [
+            ID::make('ID'),
             DateTime::make('Practice Time')->sortable(),
-            BelongsTo::make('Team'),
-            BelongsTo::make('Location'),
+            Text::make('Location'),
+            Text::make('Court'),
         ];
     }
 
