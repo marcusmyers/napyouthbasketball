@@ -16,8 +16,8 @@
 				@foreach($practices as $practice)
 					<tr>
 						<td class="p-2 border-b border-grey-light">{{$practice->formatted_practice_date}} @ {{$practice->formatted_practice_time}}</td>
-						<td class="p-2 border-b border-grey-light">{{$practice->location->first()->building}} - {{$practice->location->first()->building}}</td>
-						<td class="p-2 border-b border-grey-light">{{$practice->team->first()->name}}</td>
+						<td class="p-2 border-b border-grey-light">{{$practice->location->building}} - {{$practice->location->court}}</td>
+						<td class="p-2 border-b border-grey-light">{{$practice->team->name}}</td>
 					</tr>
 				@endforeach
 					</tbody>
