@@ -10,10 +10,6 @@ class GamePolicy
 {
     use HandlesAuthorization;
 
-    public function viewAny(User $user)
-    {
-        return $user->hasRole('super_administrator');
-    }
     /**
      * Determine whether the user can view the game.
      *
@@ -23,7 +19,7 @@ class GamePolicy
      */
     public function view(User $user, Game $game)
     {
-        return $user->hasRole('super_administrator');
+        return true;
     }
 
     /**
