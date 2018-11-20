@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Lenses\OpenPracticeTimes;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\DateTime;
@@ -22,7 +23,7 @@ class Practice extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'practice_time';
 
     /**
      * The columns that should be searched.
@@ -30,7 +31,7 @@ class Practice extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'practice_time'
+        'practice_time'
     ];
 
     /**
@@ -42,7 +43,7 @@ class Practice extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make(),
             DateTime::make('Practice Time')->sortable(),
             BelongsTo::make('Team')->nullable(),
             BelongsTo::make('Location'),
@@ -79,7 +80,9 @@ class Practice extends Resource
      */
     public function lenses(Request $request)
     {
-        return [];
+        return [
+            new OpenPracticeTimes,
+        ];
     }
 
     /**
