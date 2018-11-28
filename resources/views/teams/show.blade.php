@@ -35,6 +35,12 @@
 						<td class="p-2 border-b border-grey-light">TBD</td>
 						<td class="p-2 border-b border-grey-light">TBD</td>
 					</tr>
+				@elseif (str_contains($team->league->name,'Girls'))
+					<tr>
+						<td class="p-2 border-b border-grey-light">December 30, 2018</td>
+						<td class="p-2 border-b border-grey-light">TBD</td>
+						<td class="p-2 border-b border-grey-light">TBD</td>
+					</tr>
 				@endif
 				</tbody>
 			</table>
