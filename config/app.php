@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        LaravelHungary\Announcement\PackageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -211,6 +212,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Announce' => LaravelHungary\Announcement\Facades\Announce::class,
     ],
 
 ];

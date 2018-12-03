@@ -1,0 +1,30 @@
+{
+    "name": "marcusmyers/announcement",
+    "description": "A Laravel Nova tool.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "laravelhungary/announcement": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marcusmyers\\Announcement\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Marcusmyers\\Announcement\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

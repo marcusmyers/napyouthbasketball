@@ -14,6 +14,7 @@ window.Vue = require('vue');
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// Vue.component('announcement', require('./components/Announcement-bootstrap.vue'));
 
 new Vue({
 	el: '#nav',

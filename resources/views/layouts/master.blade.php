@@ -20,6 +20,7 @@
     </head>
     <body>
 				<div class="main">
+          {{-- {!! Announce::display() !!} --}}
 					@include('partials.navbar')
      
           <div class="content container flex flex-row mx-auto justify">
