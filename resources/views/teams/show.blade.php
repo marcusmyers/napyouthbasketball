@@ -45,4 +45,23 @@
 				</tbody>
 			</table>
 		</div>
+		<div class="w-full mt-8">
+			<h3>Practices <span class="text-xs text-grey-dark">*Practices are subject to change*</span></h3>
+	    	<table class="w-full text-left table-collapse mt-4">
+					<thead>
+						<tr>
+							<th class="text-lg font-semibold text-navy-darker p-2 bg-navy-lighter">Date</th>
+							<th class="text-lg font-semibold text-navy-darker p-2 bg-navy-lighter">Location</th>
+						</tr>
+					</thead>
+					<tbody>
+				@foreach($team->practices as $practice)
+					<tr>
+						<td class="p-2 border-b border-grey-light">{{$practice->formatted_practice_date}} @ {{$practice->formatted_practice_time}}</td>
+						<td class="p-2 border-b border-grey-light">{{$practice->location->building}} - {{$practice->location->court}}</td>
+					</tr>
+				@endforeach
+					</tbody>
+				</table>
+		</div>
 @endsection
