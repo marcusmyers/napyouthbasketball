@@ -15,6 +15,16 @@ services:
      - .:/var/www/html
     networks:
      - vessel
+  worker:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+    image: vessel/app
+    command: www-data php artisan horizon
+    volumes:
+     - .:/var/www/html
+    networks:
+     - vessel
   node:
     build:
       context: ./docker/node

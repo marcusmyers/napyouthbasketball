@@ -24,6 +24,8 @@ Route::get('/schedules', 'SchedulesController@index');
 Route::get('/teams', 'TeamsController@index');
 Route::get('/teams/{team}', 'TeamsController@show');
 
+Route::get('/media', 'MediaController@index');
+
 Route::redirect('/coaches', '/admin', 301);
 
 // Simple status or health check
