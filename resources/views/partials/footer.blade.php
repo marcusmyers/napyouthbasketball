@@ -4,7 +4,7 @@
           			<ul class="list-reset sm:flex text-lg flex-col text-left">
           				<li><a href="/schedules" class="text-navy-darker no-underline hover:text-white">Schedules</a></li>
           				<li><a href="/teams" class="text-navy-darker no-underline hover:text-white">Teams</a></li>
-          				<!-- <li><a href="/teams" class="text-navy-darker no-underline hover:text-white">Photos & Videos</a></li> -->
+          				<li><a href="/media" class="text-navy-darker no-underline hover:text-white">Photos</a></li>
           				<li><a href="/forms" class="text-navy-darker no-underline hover:text-white">Forms</a></li>
           			</ul>
           		</div>
