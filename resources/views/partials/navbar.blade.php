@@ -13,11 +13,11 @@
 						      	<li><a href="/teams" class="font-sans block sm:inline-block sm:mt-0 mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white mr-4">
 						        Teams
 						      	</a></li>
-<!-- 
-						      	<li><a href="#responsive-header" class="font-sans block mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white mr-4">
-						        Photos/Videos
+
+						      	<li><a href="/media" class="font-sans block sm:inline-block sm:mt-0 mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white mr-4">
+						        Photos
 						      	</a></li>
-						      -->
+						     
 						      	<li><a href="/coaches" class="font-sans block mt-4 lg:inline-block lg:mt-0 text-navy-lighter no-underline hover:text-white">
 						        Coaches
 						      	</a></li>
