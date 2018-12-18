@@ -11,7 +11,7 @@
 					<div>
 						<ul class="list-reset">
 						@foreach($league->teams as $team)
-							<li class="ml-5 p-3"> <a href="/teams/{{$team->id}}" class="text-navy-darker no-underline hover:text-navy-light">{{$team->name}}</a></li>
+							<li class="ml-5 p-3"> <a href="/teams/{{$team->id}}" class="text-navy-darker no-underline hover:text-navy-light">{{$team->name}}</a> <span class="font-bold italic">{{$team->record() }}</span></li>
 						@endforeach
 						</ul>
 					</div>

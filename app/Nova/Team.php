@@ -56,6 +56,7 @@ class Team extends Resource
             BelongsTo::make('League'),
             HasMany::make('Users'),
             BelongsToMany::make('Games'),
+            BelongsToMany::make('Wins', 'wins', 'App\Nova\Game'),
             HasMany::make('Practices'),
             HasMany::make('Players'),
         ];

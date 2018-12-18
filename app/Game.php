@@ -29,6 +29,11 @@ class Game extends Model
         })->first();
     }
 
+    public function winner()
+    {
+        return $this->belongsTo('App\Team');
+    }
+
     public function season()
     {
         return $this->belongsTo('App\Season');

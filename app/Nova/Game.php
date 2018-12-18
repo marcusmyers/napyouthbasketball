@@ -48,6 +48,7 @@ class Game extends Resource
             DateTime::make('Game Time')->sortable(),
             BelongsTo::make('Season')->sortable(),
             BelongsTo::make('Location'),
+            BelongsTo::make('Winner', 'winner', 'App\Nova\Team')->nullable(),
         ];
     }
 

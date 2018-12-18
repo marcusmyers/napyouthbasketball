@@ -4,6 +4,14 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+    private $seeders = [
+        RolesAndPermissionsSeeder::class,
+        SeasonSeeder::class,
+        LeagueSeeder::class,
+        UsersTableSeeder::class,
+        LocationSeeder::class,
+        TeamSeeder::class
+    ];
     /**
      * Seed the application's database.
      *
@@ -11,9 +19,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(RolesAndPermissionsSeeder::class);
-        $this->call(SeasonSeeder::class);
-        $this->call(LeagueSeeder::class);
-        $this->call(UsersTableSeeder::class);
+        $this->call($this->seeders);
     }
 }
