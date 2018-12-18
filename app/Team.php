@@ -18,7 +18,9 @@ class Team extends Model
 
     public function record()
     {
-        return $this->wins->count() . "-". $this->losses();
+        $wins = $this->wins->count() ? $this->wins->count() : 0;
+        $losses = $this->losses() != -1 ? $this->losses() : 0;
+        return $wins . "-". $losses;
     }
 
     public function losses()
