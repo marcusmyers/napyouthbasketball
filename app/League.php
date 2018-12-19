@@ -19,4 +19,11 @@ class League extends Model
     {
         return $this->belongsTo('App\Season');
     }
+
+    public function standings()
+    {
+        return $this->teams->sortByDesc( function ($team){
+            return  $team->wins;
+        });
+    }
 }
