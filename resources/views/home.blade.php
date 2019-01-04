@@ -22,7 +22,7 @@
 				<div class="main">
 					@include('partials.navbar')
 	    		<div class="bg-cover-image lg:h-160">
-	    			<img src='https://res.cloudinary.com/dblyrab9o/image/upload/v1538146117/napyouthbball/CoverPhoto/jesse-orrico-586601-unsplash.jpg'>
+            <img src='https://res.cloudinary.com/dblyrab9o/image/upload/f_auto,w_auto,c_fit/v1538146117/napyouthbball/CoverPhoto/jesse-orrico-586601-unsplash.jpg'>
 	    		</div>
      
           <div class="content container flex flex-row mx-auto justify">
