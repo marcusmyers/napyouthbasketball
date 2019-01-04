@@ -1,6 +1,8 @@
 #!/bin/zsh
 
+# Ensure if any of these commands fail, this script will
+setopt err_exit
+
 composer install
 composer prepare-test-environment
-
-vendor/bin/phpunit
+composer test

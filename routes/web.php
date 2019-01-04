@@ -19,6 +19,10 @@ Route::get('/forms', function () {
     return view('forms');
 });
 
+Route::get('/shootout', function () {
+    return view('shootout');
+});
+
 Route::get('/schedules', 'SchedulesController@index');
 
 Route::get('/teams', 'TeamsController@index');
