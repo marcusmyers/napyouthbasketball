@@ -19,15 +19,41 @@
           		<p class="mt-4">
           			<b>Divisions: </b> <i>(Not all Divisions may have enough teams to participate - Sign up Early)</i><br>
           			<ul>
-          				<li>6th Boys</li>
-          				<li>5th Boys</li>
-          				<li>4th Boys</li>
-          				<li>6th Girls</li>
-          				<li>5th Girls</li>
-          				<li>4th Girls</li>
+          				<li class="mt-2">6th Boys</li>
+          				<li class="mt-2">5th Boys</li>
+          				<li class="mt-2">4th Boys</li>
+          				<li class="mt-2">6th Girls</li>
+          				<li class="mt-2">5th Girls</li>
+          				<li class="mt-2">4th Girls</li>
           			</ul>
           		</p>
           		
+                    <div class="mt-4">
+                         <b class="mt-2">Rules: </b>
+
+                         <ul>
+                              <li class="mt-2">(2) 15 Minutes Running Clock Halves</li>
+                              <li class="mt-2">CLOCK STOPS LAST 30 SECONDS OF FIRST HALF; LAST MINUTE OF 2nd HALF UNLESS A TEAM IS AHEAD BY 20 POINTS</li>
+                              <li class="mt-2">1 - TIME OUT PER HALF (30 SECONDS) PER TEAM</li>
+                              <li class="mt-2">2 - MINUTE HALFTIME</li>
+                              <li class="mt-2">WARMUP TIMES ADJUSTED AS NEEDED TO STAY ON SCHEDULE  - BE READY TO PLAY 10 MINUTES BEFORE SCHEDULED GAME TIME</li>
+                              <li class="mt-2">OVERTIME - ONE (1) MINUTE - 1ST OVERTIME - CLOCK STOPS LAST 30 SECONDS
+2nd OVERTIME SUDDEN DEATH (1st TEAM TO SCORE) - ONLY 1 TIME OUT PER TEAM IN OVERTIME</li>
+                              <li class="mt-2">7 TEAM FOULS - 1 AND 1 FREE THROW SHOTS</li>
+                              <li class="mt-2">10 TEAM FOULS - 2 FREE THROW SHOTS</li>
+                              <li class="mt-2">6th GRADE - NO PRESS IF UP BY 12</li>
+                              <li class="mt-2">5th GRADE - M2M DEFENSE - MAY DOUBLE TEAM BALL - MAY PRESS LAST 5 MINUTES & OVERTIME UNLESS UP 
+BY 12 POINTS - FREE THROW SHOOTERS WILL SHOOT FROM STANDARD LINE - SHOOTER MAY STEP OVER LINE 
+ON SHOT BUT MAY NOT GO AFTER THE REBOUND - CAN REBOUND BALL THAT BOUNCES TO SHOOTER</li>
+                              <li class="mt-2">4th GRADE - M2M DEFENSE - MAY DOUBLE TEAM BALL - MAY PRESS LAST 2 MINUTES & OVERTIME UNLESS UP 
+BY 12 POINTS - FREE THROW SHOOTERS WILL SHOOT FROM THE TAPED SPOT ON FLOOR - SHOOTER MAY NOT 
+STEP OVER THE LINE ON FT SHOT</li>
+                              <li class="mt-2">PLEASE CLEAN BENCH AREA AFTER YOUR GAME IS OVER</li>
+                              <li class="mt-2">1st TEAM PLAQUES - 1st AND 2nd PLACE MEDALS (MAXIMUM 10 PER TEAM)</li>
+                              <li class="mt-2">TIEBREAKER - 1.) BEST RECORD  -- HEAD TO HEAD -- FEWEST POINTS ALLOWED</li>
+                         </ul>
+
+                    </div>
           		<div class="flex flex-col mx-auto md:flex-row mt-2">
 	          		<div class="mx-4 my-4 rounded shadow-lg md:w-64">
 	          			<div class="items-center flex flex-row bg-navy-lighter px-4 py-4 text-white">
@@ -35,8 +61,7 @@
 	          			</div>
 	          			<p class="mt-4 px-4 py-4"><a href="https://res.cloudinary.com/dblyrab9o/image/upload/v1546629032/napyouthbball/files/GrandCanyonShootoutTourney.pdf" class="no-underline text-grey-darker">Printable Form   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="15" height="15"><path fill="#2D4059" d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg></a> </p>
 	          		</div>
-
-							</div>
+				</div>
           	</div>
           </div>
 @endsection
