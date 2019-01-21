@@ -31,9 +31,9 @@
 				@endforeach
 				@if (str_contains($team->league->name,'Boys'))
 					<tr>
-						<td class="p-2 border-b border-grey-light">January 26, 2019</td>
-						<td class="p-2 border-b border-grey-light">TBD</td>
-						<td class="p-2 border-b border-grey-light">TBD</td>
+						<td class="p-2 border-b border-grey-light">January 19, 2019</td>
+						<td class="p-2 border-b border-grey-light">Cancelled</td>
+						<td class="p-2 border-b border-grey-light">Cancelled</td>
 					</tr>
 				@elseif (str_contains($team->league->name,'Girls'))
 					<tr>
