@@ -602,12 +602,6 @@ textarea::-webkit-input-placeholder {
   opacity: .5;
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
 input::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
   color: inherit;
@@ -6617,6 +6611,15 @@ table {
 .bg-cover-image {
   width: 100%;
   overflow: hidden;
+}
+
+.zondicon {
+  width: 16px;
+  height: 16px;
+}
+
+.email-icon {
+  fill: #2d4059;
 }
 
 @media (min-width: 576px) {
