@@ -1,4 +1,4 @@
-						<footer class="flex flex-row w-full h-32 shadow bg-navy-light">
+						<footer class="flex flex-row w-full h-32 shadow bg-navy-light pin-b">
           	<div class="container mx-auto items-center flex">
           		<div class="footer-menu w-1/2 text-left ml-4">
           			<ul class="list-reset sm:flex text-lg flex-col text-left">
@@ -36,11 +36,11 @@
           			</div>
           		</div>
           </footer>
-	        <div class="bg-navy-darkest text-center text-white no-underline h-8 items-center">
+	        <div class="bg-navy-darkest text-center text-white no-underline h-8 items-center pin-b">
 	        	<div class="items-center container mx-auto">
 	        		<p class="pt-2">
 		        		Website by <a href="https://www.bandmtechnologies.com" class="text-navy-lighter no-underline hover:text-white">B & M Technologies</a>
 		        	</p>
 	        	</div>
 	        </div>
-	      </div>
+	      
