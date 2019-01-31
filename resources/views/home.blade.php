@@ -23,7 +23,8 @@
 					@include('partials.navbar')
 	    		<div class="bg-cover-image lg:h-160">
             {{-- <img src='https://res.cloudinary.com/dblyrab9o/image/upload/f_auto,w_auto,c_fit/v1538146117/napyouthbball/CoverPhoto/jesse-orrico-586601-unsplash.jpg'> --}}
-            <img src='https://res.cloudinary.com/dblyrab9o/image/upload/f_auto,w_auto,c_fit/v1547388861/napyouthbball/CoverPhoto/DSC_0043.jpg'>
+            <img src='https://res.cloudinary.com/dblyrab9o/image/upload/v1548897573/napyouthbball/CoverPhoto/IMG_1003.jpg'>
+            {{-- <img src='https://res.cloudinary.com/dblyrab9o/image/upload/f_auto,w_auto,c_fit/v1547388861/napyouthbball/CoverPhoto/DSC_0043.jpg'> --}}
 	    		</div>
      
           <div class="content container flex flex-row mx-auto justify">
