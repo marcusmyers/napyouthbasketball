@@ -10,12 +10,14 @@
                          <p class="mt-8 text-xl">Joe Good <a href="mailto:jgood@napoleonareaschools.org"> {{ svg_icon('envelope','email-icon')}}</a></p>
                          <p class="font-s text-grey-darker">Tournament Director</p>
                        </div>
-                       <div class="flex-col md:w-1/2 mx-auto md:flex-row mt-2 text-center">
+                       <div class="flex-col md:w-1/2 mx-auto md:flex-row mt-2 text-center w-full">
                          <div class="mx-4 my-4 rounded shadow-lg md:w-64">
                               <div class="items-center flex flex-row bg-navy-lighter px-4 py-4 text-white">
-                                   <h2> Form </h2>
+                                   <h2> Documents </h2>
                               </div>
-                              <p class="mt-4 px-4 py-4"><a href="https://res.cloudinary.com/dblyrab9o/image/upload/v1546629032/napyouthbball/files/GrandCanyonShootoutTourney.pdf" class="no-underline text-grey-darker">Printable Form   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="15" height="15"><path fill="#2D4059" d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg></a> </p>
+                              <p class="mt-4 px-4 py-4"><a href="https://res.cloudinary.com/dblyrab9o/image/upload/v1549453229/napyouthbball/files/Grand_Canyon_Shootout-Schedule.pdf" class="no-underline text-grey-darker">Schedule  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="15" height="15"><path fill="#2D4059" d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg></a>  |  <a href="https://res.cloudinary.com/dblyrab9o/image/upload/v1549453229/napyouthbball/files/Grand_Canyon_Shootout-Pools.pdf" class="no-underline text-grey-darker"> Pools <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="15" height="15"><path fill="#2D4059" d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg></a></p>
+
+                              <p class="px-4 py-4"><a href="https://res.cloudinary.com/dblyrab9o/image/upload/v1546629032/napyouthbball/files/GrandCanyonShootoutTourney.pdf" class="no-underline text-grey-darker">Sign Up Form   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="15" height="15"><path fill="#2D4059" d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg></a></p>
                          </div>
                        </div>
                     </div>
